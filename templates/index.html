@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alex Kamau | Monitoring & Evaluation Specialist</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <h2>Alex Kamau</h2>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>I’m <span>Alex Kamau</span></h1>
+        <h3>Monitoring & Evaluation Specialist | Economist | Data & ICT Professional</h3>
+        <p>
+            I specialize in Monitoring & Evaluation, economic analysis, data management,
+            and ICT systems supporting public sector and development programs.
+        </p>
+
+        <div class="buttons">
+            <a href="#projects" class="btn">View My Work</a>
+            <a href="{{ url_for('static', filename='Alex_Kamau_CV.pdf') }}" class="btn-outline" download>
+                Download CV
+            </a>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Alex Kamau">
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I am an Economics graduate with strong expertise in Monitoring and Evaluation,
+        economic analysis, data management, and ICT systems.
+        I have hands-on experience supporting public sector programs,
+        policy planning, and development projects.
+    </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+        <li>Monitoring & Evaluation (M&E)</li>
+        <li>Economic & Financial Analysis</li>
+        <li>Data Analysis (Excel, Statistical Tools)</li>
+        <li>Research & Report Writing</li>
+        <li>System Administration & Technical Support</li>
+        <li>Python Programming (Beginner–Intermediate)</li>
+    </ul>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <h2>Projects & Reports</h2>
+
+    <div class="projects-grid">
+        <div class="project-card">
+            <img src="{{ url_for('static', filename='images/project1.jpg') }}">
+            <h3>NG-CDF Monitoring Report</h3>
+            <p>Analysis and monitoring of constituency-funded development projects.</p>
+        </div>
+
+        <div class="project-card">
+            <img src="{{ url_for('static', filename='images/project2.jpg') }}">
+            <h3>National Budget Analysis</h3>
+            <p>Macroeconomic and fiscal data analysis during National Treasury attachment.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <strong>alexkamau@email.com</strong></p>
+</section>
+
+<footer>
+    <p>© 2026 Alex Kamau. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
