@@ -6,22 +6,22 @@
 }
 
 body {
-    background: #f5f7fb;
+    background: #fff5f5;
     color: #222;
 }
 
 /* NAVBAR */
 nav {
+    background: #b11226;
+    color: white;
     display: flex;
     justify-content: space-between;
     padding: 20px 60px;
-    background: #6c63ff;
-    color: white;
 }
 
 nav ul {
-    display: flex;
     list-style: none;
+    display: flex;
 }
 
 nav ul li {
@@ -37,48 +37,37 @@ nav ul li a {
 .hero {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 80px 60px;
 }
 
-.hero-text h1 {
-    font-size: 42px;
+.hero-text h1 span {
+    color: #b11226;
 }
 
-.hero-text span {
-    color: #6c63ff;
-}
-
-.hero-text p {
-    margin: 20px 0;
-    max-width: 500px;
-}
-
-.buttons {
-    margin-top: 20px;
-}
-
-.btn {
-    background: #6c63ff;
-    color: white;
-    padding: 12px 20px;
-    text-decoration: none;
-    border-radius: 6px;
-    margin-right: 10px;
-}
-
-.btn-outline {
-    border: 2px solid #6c63ff;
-    padding: 10px 18px;
-    color: #6c63ff;
-    border-radius: 6px;
-    text-decoration: none;
-}
-
-/* IMAGE */
 .hero-image img {
     width: 280px;
     border-radius: 50%;
+    border: 5px solid #b11226;
+}
+
+/* BUTTONS */
+.btn {
+    background: #b11226;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #8e0f1f;
+}
+
+.btn-outline {
+    border: 2px solid #b11226;
+    padding: 10px 18px;
+    text-decoration: none;
+    color: #b11226;
 }
 
 /* SECTIONS */
@@ -93,7 +82,7 @@ section {
 /* PROJECTS */
 .projects-grid {
     display: flex;
-    gap: 20px;
+    gap: 25px;
 }
 
 .project-card {
@@ -101,6 +90,12 @@ section {
     padding: 15px;
     border-radius: 10px;
     width: 300px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
 }
 
 .project-card img {
@@ -110,8 +105,8 @@ section {
 
 /* FOOTER */
 footer {
+    background: #b11226;
+    color: white;
     text-align: center;
     padding: 20px;
-    background: #6c63ff;
-    color: white;
 }
