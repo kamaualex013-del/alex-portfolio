@@ -2,106 +2,151 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alex Kamau | Professional Portfolio</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
 
-<nav>
-    <h2>Alex Kamau</h2>
-    <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#fitness">Fitness</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="#hero" class="nav-logo">Alex Kamau</a>
+        <ul class="nav-menu">
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#fitness" class="nav-link">Fitness</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </div>
 </nav>
 
-<section class="hero">
-    <div class="hero-text">
-        <h1>I’m <span>Alex Kamau</span></h1>
-        <h3>M&E Specialist | Economist | Data & ICT Professional</h3>
+<!-- ================= HERO ================= -->
+<section id="hero" class="hero-section">
+    <div class="hero-content">
 
-        <div class="buttons">
-            <a class="btn" href="#projects">View My Work</a>
-            <a class="btn-outline" 
-               href="{{ url_for('static', filename='Alex_Kamau_CV.pdf') }}" 
-               download>
-               Download CV
-            </a>
+        <div class="hero-text">
+            <h1>I’m <span class="highlight">Alex Kamau</span></h1>
+            <p>
+                Monitoring & Evaluation Specialist | Economist | Data & ICT Professional
+            </p>
+
+            <div class="buttons">
+                <a href="#projects" class="btn">View My Work</a>
+                <a href="{{ url_for('static', filename='Alex_Kamau_CV.pdf') }}"
+                   class="btn-outline" download>
+                    Download CV
+                </a>
+            </div>
         </div>
-    </div>
 
-    <div class="hero-image">
-        <img src="{{ url_for('static', filename='images/profile.jpg') }}">
+        <div class="hero-image">
+            <img src="{{ url_for('static', filename='images/profile.jpg') }}"
+                 alt="Alex Kamau Profile Photo">
+        </div>
+
     </div>
 </section>
 
-<section id="about">
-    <h2>About Me</h2>
-    <p>
+<!-- ================= ABOUT ================= -->
+<section id="about" class="section">
+    <h2 class="section-title">About Me</h2>
+    <p class="section-text">
         I am an Economics graduate with strong expertise in Monitoring & Evaluation,
-        economic analysis, data management, and ICT systems supporting development programs.
+        economic analysis, data management, and ICT systems supporting public sector
+        and development programs. I have hands-on experience in project monitoring,
+        bursary administration, data reporting, and policy support.
     </p>
 </section>
 
-<section id="skills">
-    <h2>Professional Skills</h2>
+<!-- ================= SKILLS ================= -->
+<section id="skills" class="section">
+    <h2 class="section-title">Professional Skills</h2>
     <ul class="skills-list">
         <li>Monitoring & Evaluation (M&E)</li>
         <li>Economic & Financial Analysis</li>
         <li>Data Analysis (Excel, Statistical Tools)</li>
         <li>Research & Report Writing</li>
         <li>ICT Systems & Technical Support</li>
-        <li>Python Programming</li>
+        <li>Python Programming (Beginner–Intermediate)</li>
     </ul>
 </section>
 
-<section id="projects">
-    <h2>Projects & Reports</h2>
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="section">
+    <h2 class="section-title">Projects & Reports</h2>
 
     <div class="projects-grid">
+
         <div class="project-card">
-            <img src="{{ url_for('static', filename='images/project_excel.jpg') }}">
+            <img src="{{ url_for('static', filename='images/project1.jpg') }}"
+                 alt="Budget Analysis Project">
             <h3>Budget Analysis (Excel)</h3>
-            <a class="btn"
-               href="{{ url_for('static', filename='projects/Budget_Analysis.xlsx') }}"
-               download>Download Excel</a>
+            <p>
+                Analysis of public financial data to support planning and decision-making.
+            </p>
+            <a href="{{ url_for('static', filename='projects/Budget_Analysis.xlsx') }}"
+               class="btn" download>
+                Download Excel
+            </a>
         </div>
 
         <div class="project-card">
-            <img src="{{ url_for('static', filename='images/project_word.jpg') }}">
+            <img src="{{ url_for('static', filename='images/project2.jpg') }}"
+                 alt="Monitoring and Evaluation Report">
             <h3>M&E Report (Word)</h3>
-            <a class="btn"
-               href="{{ url_for('static', filename='projects/M_E_Report.docx') }}"
-               download>Download Report</a>
+            <p>
+                Monitoring and evaluation report for constituency development projects.
+            </p>
+            <a href="{{ url_for('static', filename='projects/M_E_Report.docx') }}"
+               class="btn" download>
+                Download Report
+            </a>
         </div>
+
     </div>
 </section>
 
-<section id="fitness">
-    <h2>Fitness Trainer</h2>
-    <p>
-        Certified fitness trainer helping clients achieve strength, endurance, and healthy lifestyles.
+<!-- ================= FITNESS ================= -->
+<section id="fitness" class="section">
+    <h2 class="section-title">Fitness Trainer</h2>
+    <p class="section-text">
+        Certified fitness trainer offering personalised training programs focused on
+        strength, endurance, body transformation, and overall wellness.
     </p>
 
     <div class="projects-grid">
         <div class="project-card">
-            <img src="{{ url_for('static', filename='images/me_training.jpg') }}">
+            <img src="{{ url_for('static', filename='images/me_training.jpg') }}"
+                 alt="Fitness Training Session">
             <h3>Personal Training</h3>
-            <p>One-on-one coaching, body transformation & wellness programs.</p>
+            <p>
+                One-on-one coaching, workout plans, and lifestyle guidance tailored
+                to individual goals.
+            </p>
         </div>
     </div>
 </section>
 
-<section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <strong>alexkamau@email.com</strong></p>
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="section">
+    <h2 class="section-title">Contact</h2>
+    <p>Email: <strong>your-email@example.com</strong></p>
+    <p>
+        LinkedIn:
+        <a href="https://www.linkedin.com/in/alex-kamau-5109a8241/"
+           target="_blank">
+            View my LinkedIn Profile
+        </a>
+    </p>
 </section>
 
-<footer>
-    <p>© 2026 Alex Kamau | Professional Portfolio</p>
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <p>© 2026 Alex Kamau • All Rights Reserved</p>
 </footer>
 
 </body>
